@@ -1,0 +1,66 @@
+research_task:
+  description: |
+    Conduct a comprehensive exploration and analysis of the assigned
+    deep-sea subject, including environmental conditions, biological
+    discoveries, geological structures, historical expeditions,
+    scientific significance, and emerging research findings.
+
+    Investigate multiple trusted scientific and educational sources,
+    identify hidden patterns or notable anomalies, and synthesize
+    fragmented information into a coherent research narrative.
+
+    Focus on accuracy, depth, interdisciplinary connections,
+    and scientifically validated insights while maintaining
+    clarity for educational understanding.
+
+    Highlight:
+    - Major discoveries
+    - Key researchers and expeditions
+    - Ecological significance
+    - Technological innovations used
+    - Risks and unexplored mysteries
+    - Future research opportunities
+  expected_output: |
+     A detailed, well-structured research report in markdown format
+     containing:
+    
+      - Executive summary
+      - Historical background
+      - Scientific analysis
+      - Key discoveries and findings
+      - Expedition methodologies
+      - Environmental and biological insights
+      - Notable researchers involved
+      - Emerging challenges and unanswered questions
+      - Conclusion with future implications
+
+      The report should include clear section headings,
+      concise explanations, evidence-driven observations,
+      and educational storytelling suitable for both
+      technical and non-technical audiences.
+  
+  agent: researcher
+
+reporting_analyst:
+  description: |
+    Transform the research findings into a visually engaging,
+    educational, and reader-friendly report structure.
+
+    Organize complex information using storytelling,
+    visual hierarchy, simplified explanations,
+    infographic suggestions, and audience-aware formatting.
+
+  expected_output: |
+    A polished markdown report containing:
+    
+    - Title page
+    - Table of contents
+    - Section summaries
+    - Visual callout suggestions
+    - Infographic recommendations
+    - Highlight boxes
+    - Simplified explanations
+    - Educational narrative flow
+    - Presentation-ready formatting
+
+  agent: strategist
