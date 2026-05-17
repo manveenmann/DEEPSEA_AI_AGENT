@@ -1,11 +1,16 @@
 import os
-
 from crewai import Agent, Crew, Process, Task,LLM
 from crewai.project import CrewBase, agent, crew, task
 
+from crewai_tools import SerperDevTool
+from deepsea_ai_agent.tools.custom_tool import TavilySearchTool, JinaReaderTool
+from dotenv import load_dotenv
+
+load_dotenv()
+
 llm = LLM(
     model=os.getenv("MODEL"),
-    api_key=os.getenv("GEMINI_API_KEY")
+    api_key=os.getenv("GROQ_API_KEY")
     )
 
 @CrewBase
@@ -19,7 +24,11 @@ class DeepSeaCrew():
         return Agent(
             config=self.agents_config["researcher"],
             verbose=True,
-            llm=llm
+             tools=[
+                SerperDevTool(),
+                TavilySearchTool(),
+                JinaReaderTool()
+            ]
         )
 
     @agent
@@ -27,7 +36,11 @@ class DeepSeaCrew():
         return Agent(
             config=self.agents_config["strategist"],
             verbose=True,
-            llm=llm
+             tools=[
+                SerperDevTool(),
+                TavilySearchTool()
+              
+            ]
         )
 
     @task

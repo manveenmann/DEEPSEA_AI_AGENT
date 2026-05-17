@@ -1,66 +1,61 @@
 research_task:
   description: |
-    Conduct a comprehensive exploration and analysis of the assigned
-    deep-sea subject, including environmental conditions, biological
-    discoveries, geological structures, historical expeditions,
-    scientific significance, and emerging research findings.
+    Research the assigned deep-sea subject by analyzing:
+    - environmental conditions
+    - marine life and ecosystems
+    - geological structures
+    - historical expeditions
+    - scientific discoveries
+    - emerging research findings
 
-    Investigate multiple trusted scientific and educational sources,
-    identify hidden patterns or notable anomalies, and synthesize
-    fragmented information into a coherent research narrative.
+    Use reliable scientific and educational sources to identify
+    important patterns, discoveries, ecological significance,
+    technological innovations, unexplored mysteries,
+    and future research opportunities.
 
-    Focus on accuracy, depth, interdisciplinary connections,
-    and scientifically validated insights while maintaining
-    clarity for educational understanding.
+    Maintain scientific accuracy while keeping explanations
+    clear and educational.
 
-    Highlight:
-    - Major discoveries
-    - Key researchers and expeditions
-    - Ecological significance
-    - Technological innovations used
-    - Risks and unexplored mysteries
-    - Future research opportunities
   expected_output: |
-     A detailed, well-structured research report in markdown format
-     containing:
-    
-      - Executive summary
-      - Historical background
-      - Scientific analysis
-      - Key discoveries and findings
-      - Expedition methodologies
-      - Environmental and biological insights
-      - Notable researchers involved
-      - Emerging challenges and unanswered questions
-      - Conclusion with future implications
+    A structured markdown research report containing:
 
-      The report should include clear section headings,
-      concise explanations, evidence-driven observations,
-      and educational storytelling suitable for both
-      technical and non-technical audiences.
-  
+    - Executive summary
+    - Historical background
+    - Scientific analysis
+    - Major discoveries
+    - Expedition methods
+    - Environmental insights
+    - Key researchers
+    - Challenges and unanswered questions
+    - Future implications
+
+    Use clear headings, concise explanations,
+    and evidence-based educational storytelling.
+
   agent: researcher
+
 
 reporting_analyst:
   description: |
-    Transform the research findings into a visually engaging,
-    educational, and reader-friendly report structure.
+    Convert the research findings into a visually organized,
+    engaging, and easy-to-understand educational report.
 
-    Organize complex information using storytelling,
-    visual hierarchy, simplified explanations,
-    infographic suggestions, and audience-aware formatting.
+    Improve readability using clear structure,
+    simplified explanations, storytelling flow,
+    and visual presentation suggestions.
 
   expected_output: |
     A polished markdown report containing:
-    
+
     - Title page
     - Table of contents
     - Section summaries
-    - Visual callout suggestions
-    - Infographic recommendations
-    - Highlight boxes
+    - Visual and infographic suggestions
+    - Highlight sections
     - Simplified explanations
-    - Educational narrative flow
     - Presentation-ready formatting
+
+    Ensure the report is visually clear,
+    educational, and audience-friendly.
 
   agent: strategist
