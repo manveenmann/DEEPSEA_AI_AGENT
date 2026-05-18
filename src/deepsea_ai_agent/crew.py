@@ -2,7 +2,7 @@ import os
 from crewai import Agent, Crew, Process, Task,LLM
 from crewai.project import CrewBase, agent, crew, task
 
-from crewai_tools import SerperDevTool
+from crewai_tools import FileReadTool, FileWriterTool, SerperDevTool
 from deepsea_ai_agent.tools.custom_tool import TavilySearchTool, JinaReaderTool
 from dotenv import load_dotenv
 
@@ -24,7 +24,12 @@ class DeepSeaCrew():
         return Agent(
             config=self.agents_config["researcher"],
             verbose=True,
-             tools=[
+           # reasoning=True,
+            #max_iterations=10,
+            #max_execution_time=600,
+            inject_date=True,
+            cache=True,
+            tools=[
                 SerperDevTool(),
                 TavilySearchTool(),
                 JinaReaderTool()
@@ -36,10 +41,14 @@ class DeepSeaCrew():
         return Agent(
             config=self.agents_config["strategist"],
             verbose=True,
+            #reasoning=True,
+            #multimodal=True,
+            inject_date=True,
+            #max_iterations=20,
+            #max_execution_time=300,
              tools=[
-                SerperDevTool(),
-                TavilySearchTool()
-              
+               FileReadTool(),
+               FileWriterTool()
             ]
         )
 
